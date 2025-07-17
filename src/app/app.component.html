@@ -229,7 +229,7 @@
       <h1>Hello, {{ data.title }}</h1>
       <p>Congratulations! Your app is running. 🎉</p>
 
-      <input class="demo" [value]="data.title" (keyUp)="onKeyUp(titleInput.value)" #titleInput/>
+      <input type="text" class="demo" [value]="data.title" (keyup)="onKeyUp(titleInput.value)" #titleInput/>
 
 
     </div>
