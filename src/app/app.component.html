@@ -185,7 +185,8 @@
         viewBox="0 0 982 239"
         fill="none"
         class="angular-logo"
-      >
+        (click)="onLogoClicked()"
+        >
         <g clip-path="url(#a)">
           <path
             fill="url(#b)"
@@ -225,8 +226,12 @@
           <clipPath id="a"><path fill="#fff" d="M0 0h982v239H0z" /></clipPath>
         </defs>
       </svg>
-      <h1>Hello, {{ title }}</h1>
+      <h1>Hello, {{ data.title }}</h1>
       <p>Congratulations! Your app is running. 🎉</p>
+
+      <input class="demo" [value]="data.title" (keyUp)="onKeyUp(titleInput.value)" #titleInput/>
+
+
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
